@@ -3,7 +3,7 @@ import requests
 import mimetypes
 from datetime import datetime
 from urllib.parse import urljoin, unquote
-from utils.replace_str import replaceWithUnderscore
+from Domains.utils.replace_str import replaceWithUnderscore
 
 
 def download_images(soup, url, base_folder) -> list:

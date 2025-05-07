@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
-from utils.replace_str import replaceWithUnderscore
-from utils.compress_folder import compress_folder
+from Domains.utils.replace_str import replaceWithUnderscore
+from Domains.utils.compress_folder import compress_folder
 
 def save_to_file(data: dict, base_folder: str):
     os.makedirs(base_folder, exist_ok=True)

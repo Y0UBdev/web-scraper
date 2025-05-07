@@ -1,5 +1,5 @@
 
-from services.download_images import download_images
+from Domains.services.download_images import download_images
 from bs4 import Comment
 
 
