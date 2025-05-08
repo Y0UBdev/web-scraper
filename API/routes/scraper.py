@@ -15,9 +15,9 @@ scrape_bp = Blueprint("scrape", __name__)
 def scrape():
     
     url = request.form.get("url")
-    print(request.form)
     lang = request.form.get("lang", "").strip()
     custom_name = request.form.get("name", "").strip()
+    format_type = request.form.get("format", "txt").strip().lower()
 
     if not url:
         return jsonify({"error": "L'URL est manquante."}), 400
@@ -31,7 +31,7 @@ def scrape():
     os.makedirs(base_folder, exist_ok=True)
 
     result = extract_data(scraper.get_soup(), scraper.get_url(), base_folder)
-    save_to_file(result, base_folder)
+    save_to_file(result, base_folder, format_type)
     zip_path = compress_folder(base_folder)
 
     return jsonify({
