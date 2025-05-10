@@ -25,7 +25,7 @@ const ScraperBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="conversion-bar">
+    <form onSubmit={handleSubmit} className="scraper-bar">
       <input
         type="url"
         name="url"
@@ -33,7 +33,7 @@ const ScraperBar = () => {
         value={form.url}
         onChange={handleChange}
         required
-        className="flex-1 px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="url-input"
       />
 
       <input
@@ -42,7 +42,7 @@ const ScraperBar = () => {
         placeholder="Langue (fr, en, etc.)"
         value={form.lang}
         onChange={handleChange}
-        className="w-32 px-4 py-2 rounded border border-gray-300"
+        className="lang-input"
       />
 
       <input
@@ -51,14 +51,14 @@ const ScraperBar = () => {
         placeholder="Nom personnalisé"
         value={form.name}
         onChange={handleChange}
-        className="w-40 px-4 py-2 rounded border border-gray-300"
+        className="name-input"
       />
 
       <select
         name="format"
         value={form.format}
         onChange={handleChange}
-        className="w-28 px-3 py-2 rounded border border-gray-300">
+        className="format-select">
         <option value="txt">.txt</option>
         <option value="json">.json</option>
       </select>
