@@ -1,10 +1,10 @@
 import os
 from datetime import datetime
-from controller.WebScraper   import WebScraper
-from services.extract_data   import extract_data
-from services.saving_to_file import save_to_file
-from utils.replace_str       import replaceWithUnderscore
-from utils.compress_folder   import compress_folder
+from Domains.controller.WebScraper   import WebScraper
+from Domains.services.extract_data   import extract_data
+from Domains.services.saving_to_file import save_to_file
+from Domains.utils.replace_str       import replaceWithUnderscore
+from Domains.utils.compress_folder   import compress_folder
 
 
 def ask_folder_name() -> str:
